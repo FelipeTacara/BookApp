@@ -2,9 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { signOut } from "@/auth";
 import { Button } from "@/components/ui/button";
-import { Session } from "next-auth";
 
-const Header = ({ session }: { session: Session }) => {
+const Header = () => {
   return (
     <header className="my-10 flex justify-between gap-5">
       <Link href="/">
@@ -12,7 +11,7 @@ const Header = ({ session }: { session: Session }) => {
       </Link>
 
       <ul className="flex flex-row items-center gap-8">
-        {/* <li>
+        <li>
           <form
             action={async () => {
               "use server";
@@ -23,7 +22,7 @@ const Header = ({ session }: { session: Session }) => {
           >
             <Button>Logout</Button>
           </form>
-        </li> */}
+        </li>
       </ul>
     </header>
   );
