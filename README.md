@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Introduction
 
-## Getting Started
+Built with Next.js, TypeScript, and Postgres, the University Library Management System is a production-grade platform featuring a public-facing app and an admin interface. It offers advanced functionalities like seamless book borrowing with reminders and receipts, robust user management, automated workflows, and a modern, optimized tech stack for real-world scalability.
 
-First, run the development server:
+## Tech Stack
+
+- Next.js
+- PostgreSQL
+- Upstash
+- ImageKit
+- TypeScript
+- Resend
+- Tailwind CSS
+
+## Using the project
+
+Follow these steps to set up the project locally on your machine.
+
+Prerequisites
+
+Make sure you have the following installed on your machine:
+- Git
+- Node
+- npm
+
+#### Cloning the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/FelipeTacara/BookApp
+cd BookApp
 ```
+#### Instalation
+Install the project dependencies
+```bash
+npm install
+```
+#### Set Up Environment Variables
+Create a new file named `.env` in the root of your project and add the following content:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```bash
+NEXT_PUBLIC_IMAGEKIT_PUBLIC_KEY=
+IMAGEKIT_PRIVATE_KEY=
+NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT=
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+NEXT_PUBLIC_API_ENDPOINT=
+NEXT_PUBLIC_PROD_API_ENDPOINT=
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+DATABASE_URL=
 
-## Learn More
+UPSTASH_REDIS_URL=
+UPSTASH_REDIS_TOKEN=
 
-To learn more about Next.js, take a look at the following resources:
+AUTH_SECRET=
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Required for workflow
+QSTASH_URL=
+QSTASH_TOKEN=
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# RESEND_TOKEN=
+RESEND_TOKEN=
+```
+Replace the placeholder values with your actual ImageKit, NeonDB, Upstash, and Resend credentials. You can obtain these credentials by signing up on the [ImageKit](https://imagekit.io), [NeonDB](https://neon.com), [Upstash](https://upstash.com/), and [Resend](https://resend.com/).
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+#### Running the project
+```bash
+npm run dev
+```
+Open http://localhost:3000 in your browser to view the project.
